@@ -83,3 +83,6 @@
   padding: 20px;
   text-align: center;
 }
+.nowrap{
+  text-wrap: nowrap;
+}
