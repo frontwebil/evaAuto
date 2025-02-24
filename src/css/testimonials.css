@@ -70,9 +70,9 @@
 
 .modal-close {
   position: absolute;
-  top: -40px;
-  right: -40px;
-  font-size: 30px;
+  top: 0px;
+  right: 0px;
+  font-size: 50px;
   color: white;
   background: none;
   border: none;
@@ -95,11 +95,11 @@
 }
 
 .modal-prev {
-  left: -60px;
+  left: 0px;
 }
 
 .modal-next {
-  right: -60px;
+  right: 0px;
 }
 
 .modal-prev:hover,

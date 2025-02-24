@@ -5,8 +5,10 @@
 
 .how-we-work-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 40px;
+  gap: 15px;
 }
 .how-we-work-card {
   max-width: 305px;
@@ -16,3 +18,4 @@
   text-align: center;
   gap: 10px;
 }
+

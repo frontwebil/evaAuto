@@ -22,6 +22,9 @@
   }
 }
 @media only screen and (max-width: 1000px) {
+  .how-we-work-flex {
+    gap: 40px;
+  }
   .footer-flex {
     flex-direction: column;
     align-items: flex-start;
@@ -34,6 +37,10 @@
 }
 
 @media only screen and (max-width: 750px) {
+  .how-we-work-card {
+    max-width: 600px;
+    width: 100%;
+  }
   .footer-flex-left {
     flex-direction: column;
   }
