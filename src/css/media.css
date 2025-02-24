@@ -41,6 +41,14 @@
   .uniqDesign-column-image {
     height: auto;
 }
+.br{
+  display: none;
+  height: 0;
+  line-height: 0;
+}
+.uniqDesign-column-top.empty{
+  display: none;
+}
 }
 @media only screen and (max-width: 1000px) {
   .how-we-work-flex {
