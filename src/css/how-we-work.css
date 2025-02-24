@@ -1,0 +1,18 @@
+.how-we-work{
+  background: rgba(238, 241, 248, 1);
+  padding: 40px 0;
+}
+
+.how-we-work-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.how-we-work-card {
+  max-width: 305px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}

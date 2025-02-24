@@ -1,0 +1,213 @@
+.modalConsultating {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(9, 9, 9, 0);
+  transition: background-color 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.modalConsultating.active {
+  display: block;
+  animation: fadeInModal 0.3s forwards;
+}
+
+.modalConsultating-container {
+  z-index: 11;
+  padding: 40px;
+  position: fixed;
+  max-width: 630px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background: rgba(250, 250, 250, 1);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  opacity: 0;
+  transform: translate(-50%, -40%);
+  transition: all 0.3s ease-in-out;
+}
+
+.modalConsultating.active .modalConsultating-container {
+  animation: slideInModal 0.3s forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    background: rgba(9, 9, 9, 0);
+  }
+  to {
+    opacity: 1;
+    background: rgba(9, 9, 9, 0.7);
+  }
+}
+
+@keyframes slideInModal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Анімація закриття */
+.modalConsultating.closing {
+  animation: fadeOutModal 0.3s forwards;
+}
+
+.modalConsultating.closing .modalConsultating-container {
+  animation: slideOutModal 0.3s forwards;
+}
+
+@keyframes fadeOutModal {
+  from {
+    opacity: 1;
+    background: rgba(9, 9, 9, 0.7);
+  }
+  to {
+    opacity: 0;
+    background: rgba(9, 9, 9, 0);
+  }
+}
+
+@keyframes slideOutModal {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+.modalConsultating-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.form-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  width: 100%;
+  padding: 12px;
+  background: rgba(45, 45, 45, 0.05);
+  border: 1px solid rgba(45, 45, 45, 0.2);
+  border-radius: 10px;
+  transition: border-color 0.3s;
+  color: rgba(45, 45, 45, 1);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(9, 65, 202, 1);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modalButtonCons {
+  width: 100%;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29.26px;
+  letter-spacing: 0%;
+  color: rgba(250, 250, 250, 1);
+  background: rgba(9, 65, 202, 1);
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.modalButtonCons:hover {
+  background-color: #0043a9;
+}
+
+.modalButtonCons:active {
+  transform: scale(0.98);
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* THank you */
+
+.modalTahnkYou {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(9, 9, 9, 0);
+  transition: background-color 0.3s ease-in-out;
+  opacity: 0;
+}
+.modalTahnkYou.active {
+  display: block;
+  animation: fadeInModal 0.3s forwards;
+}
+
+.modalTahnkYou-container {
+  z-index: 11;
+  padding: 40px;
+  position: fixed;
+  max-width: 630px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background: rgba(250, 250, 250, 1);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  opacity: 1;
+  transform: translate(-50%, -40%);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalTahnkYou.active .modalTahnkYou-container {
+  animation: slideInModal 0.3s forwards;
+}
+
+.modalTahnkYou-return {
+  width: 100%;
+  background: rgba(9, 65, 202, 1);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29.26px;
+  letter-spacing: 0%;
+  color: rgba(250, 250, 250, 1);
+  padding: 12px;
+}

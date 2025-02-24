@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(/src/css/reset.css);
+@import url(/src/css/generals.css);
+@import url(/src/css/hero.css);
+@import url(/src/css/header.css);
+@import url(/src/css/statistic.css);
+@import url(/src/css/goods.css);
+@import url(/src/css/modal.css);
+@import url(/src/css/whyChooseUs.css);
+@import url(/src/css/uniq.css);
+@import url(/src/css/gallery.css);
+@import url(/src/css/how-we-work.css);
+@import url(/src/css/testimonials.css);
+@import url(/src/css/remember.css);
+@import url(/src/css/contacts.css);
+@import url(/src/css/footer.css);
+@import url(/src/css/moreGoods.css);
+@import url(/src/css/personal.css);
+@import url(/src/css/media.css);
+* {
+  font-family: "Montserrat", serif;
+  color: rgba(9, 9, 9, 1);
+}

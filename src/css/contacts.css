@@ -1,0 +1,30 @@
+/* .contacts {
+} */
+.contacts-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+.contacts-flex-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contacts-flex-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contacts-flex-left-column-line {
+  width: 100%;
+  border: 1px solid rgba(9, 65, 202, 0.2)
+}
+.contacts-flex-right {
+  display: flex;
+  gap: 25px;
+}
+
+.contacts-flex-right-img{
+  width: 25px;
+}

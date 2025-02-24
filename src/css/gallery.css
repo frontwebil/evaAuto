@@ -1,0 +1,228 @@
+.gallery-container {
+  margin: 0 auto;
+}
+
+.gallery-slides {
+  margin: 40px auto 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 406px;
+}
+
+.gallery-slide {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+.gallery-slide.active {
+  opacity: 1;
+}
+.gallery-slide-block {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-image{
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slide-block-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #4b0b044d;
+  padding-bottom: 12px;
+}
+
+.controls-gallery-slides {
+  max-width: 1340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.indicators-gallery {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.indicators-gallery button.active {
+  border: 1px solid rgba(9, 65, 202, 1);
+  background: rgba(9, 65, 202, 0.05);
+  color: rgba(9, 65, 202, 1);
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+}
+
+.indicators-testimonials button.active {
+  border: 1px solid rgba(9, 65, 202, 1);
+    background: rgba(9, 65, 202, 0.05);
+    color: rgba(9, 65, 202, 1);
+}
+
+.read-more-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: right;
+
+  color: #515151;
+  transition: 0.5s ease all;
+  padding-bottom: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.read-more-btn:hover {
+  opacity: 0.8;
+}
+
+.text-wrapper {
+  transition: height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.testimonial-slide-text {
+  margin: 0;
+}
+
+/* Анімації для слайдів відгуків */
+.testimonial-slide {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.testimonial-slide-block {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Анімація появи блоків відгуків */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Затримка для послідовної появи блоків */
+.testimonial-slide-block:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.testimonial-slide-block:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.testimonial-slide-block:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Анімація для тексту */
+.testimonial-slide-text {
+  transition: max-height 0.3s ease-out;
+}
+
+/* Анімація для рейтингу зірок */
+.testimonial-slide-rating {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.gallery-modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.modal-prev {
+  left: -60px;
+}
+
+.modal-next {
+  right: -60px;
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,304 @@
+.testimonial-container {
+  margin: 0 auto;
+}
+
+.testimonial-slides {
+  margin: 0px auto 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 406px;
+}
+
+.testimonial-slide {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+}
+
+.testimonial-slide-block {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-image {
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.testimonial-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.testimonial-modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.modal-prev {
+  left: -60px;
+}
+
+.modal-next {
+  right: -60px;
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* SLIDER */
+
+
+.testimonials-slides {
+  margin: 40px auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 290px;
+}
+
+.testimonial-slide {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+.testimonial-slide.active {
+  opacity: 1;
+}
+.testimonial-slide-block {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border-radius: 12px;
+  width: 100%;
+  border: 1px solid rgba(9, 65, 202, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonial-slide-rating {
+  color: #ffd500;
+  font-size: 20px;
+}
+.testimonial-slide-title {
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  color: #1f2937;
+}
+.testimonial-slide-text {
+  padding-top: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: #1e1e1e;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+.testimonial-slide-link {
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #717680;
+}
+
+.controls-testimonials-slides {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.indicators-testimonials{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.indicators-testimonials button.active {
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+}
+.read-more-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #717680;
+  transition: 0.5s ease all;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.read-more-btn:hover {
+  opacity: 0.8;
+}
+
+.text-wrapper {
+  transition: height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.testimonial-slide-text {
+  margin: 0;
+}
+
+/* Анімації для слайдів відгуків */
+.testimonial-slide {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.testimonial-slide-block {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Анімація появи блоків відгуків */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Затримка для послідовної появи блоків */
+.testimonial-slide-block:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-slide-block:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-slide-block:nth-child(3) { animation-delay: 0.3s; }
+
+/* Анімація для тексту */
+.testimonial-slide-text {
+  transition: max-height 0.3s ease-out;
+}
+
+/* Анімація для рейтингу зірок */
+.testimonial-slide-rating {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.testimonial-image{
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-image {
+  max-width: 100%;
+  width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}

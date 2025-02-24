@@ -1,0 +1,175 @@
+.more-goods{
+  background: rgba(238, 241, 248, 1);
+  padding: 20px 0;
+}
+
+.moreGoods {
+  background-color: #f4f4f4;
+  padding: 40px 10px;
+}
+
+.moreGoods-slides {
+  margin: 40px auto;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+}
+.moreGoods-slide {
+  max-width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.moreGoods-slide.active {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+}
+.moreGoods-block {
+  max-width: 400px;
+  width: 100%;
+  background: transparent;
+  border-radius: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.moreGoods-block-img-wrapper{
+  border: 1px solid rgba(9, 65, 202, 0.2);
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+
+.moreGoods-block-top {
+  display: flex;
+  gap: 20px;
+}
+.moreGoods-block-top-img {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  max-width: 90px;
+}
+.moreGoods-block-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.moreGoods-block-top-text-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #038650;
+  word-wrap: break-word; /* Дозволяє переносити слова */
+  word-break: break-word; /* Для забезпечення переносу в сучасних браузерах */
+  white-space: normal; /* Забезпечує переноси рядків */
+}
+.moreGoods-block-top-text-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.moreGoods-block-top-text-row-title {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #1e1e1e;
+}
+.moreGoods-block-top-text-row-decription {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #1e1e1e;
+}
+.moreGoods-block-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.moreGoods-block-info-text {
+  backdrop-filter: blur(10px);
+  background: #038650;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #fafafa;
+  word-wrap: break-word; /* Дозволяє переносити слова */
+  word-break: break-word; /* Для забезпечення переносу в сучасних браузерах */
+  white-space: normal; /* Забезпечує переноси рядків */
+}
+
+.controls-moreGoods-slides {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.controls-moreGoods-prev {
+  width: 24px;
+  height: 24px;
+}
+.indicators-moreGoods {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.indicator-moreGoods {
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-align: center;
+color: #1e1e1e;
+padding: 6px 12px;
+border-radius: 8px;
+width: 38px;
+cursor: pointer;
+}
+.indicator-moreGoods.active {
+  border: 1px solid rgba(9, 65, 202, 1);
+  background: rgba(9, 65, 202, 0.05);
+  color: rgba(9, 65, 202, 1);
+}
+.controls-moreGoods-next {
+  width: 24px;
+  height: 24px;
+}
+
+.moreGoods-block-title{
+  min-height: calc(1.8em * 2); /* Мінімальна висота у два рядки */
+}
+.link-to-inst{
+  background: rgba(9, 65, 202, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.moreGoods-block-title{
+  padding-bottom: 12px;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(9, 65, 202, 0.2);
+}

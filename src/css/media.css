@@ -1,0 +1,171 @@
+@media only screen and (max-width: 1300px) {
+  /* .moreGoods-block {
+    max-width: 380px;
+  } */
+}
+@media only screen and (max-width: 1200px) {
+  .remember-right {
+    max-width: 460px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .remember {
+    flex-direction: column;
+  }
+  .orderConsult-button {
+    max-width: 100%;
+    font-size: 22px;
+  }
+  .remember-right {
+    max-width: 100%;
+    gap: 5px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .contacts-flex-right {
+    display: none;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .footer-flex-left {
+    flex-direction: column;
+  }
+  .footer-flex-left-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .marginSection {
+    height: 80px;
+  }
+  .remember {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .moreGoods-block{
+    max-width: 100%;
+  }
+  .controls-moreGoods-slides{
+    max-width: 420px;
+  }
+}
+@media only screen and (max-width: 565px) {
+  .testimonials-slides{
+    margin: 20px auto;
+  }
+  .section-title{
+    gap: 6px;
+  }
+  .fs-title {
+    font-size: 38px;
+  }
+  .fs-xl {
+    font-size: 38px;
+  }
+  .fs-sm {
+    font-size: 22px;
+  }
+  .fs-ml {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .fs-xsm{
+    font-size: 20px;
+  }
+  .fs-title {
+    font-size: 36px;
+  }
+  .fs-xl {
+    font-size: 34px;
+  }
+  .fs-sm {
+    font-size: 18px;
+  }
+  .fs-ml {
+    font-size: 24px;
+  }
+  .orderConsult-button {
+    font-size: 18px;
+  }
+  .contacts-flex-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .marginSection {
+    height: 70px;
+  }
+
+  .fs-m {
+    font-size: 20px;
+  }
+
+
+  .padding-container {
+    padding: 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .modal-content{
+    padding: 0;
+  }
+  .fs-title {
+    font-size: 30px;
+  }
+  .fs-xl {
+    font-size: 31px;
+  }
+  .fs-sm {
+    font-size: 16px;
+  }
+  .fs-ml {
+    font-size: 21px;
+  }
+  .orderConsult-button {
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .remember {
+    padding: 15px 12px;
+  }
+  .remember-right {
+    padding: 15px 12px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .fs-title {
+    font-size: 27px;
+  }
+  .fs-m {
+    font-size: 18px;
+  }
+
+  .fs-xl {
+    font-size: 28px;
+  }
+  .fs-sm {
+    font-size: 14px;
+  }
+  .fs-ml {
+    font-size: 21px;
+  }
+  .orderConsult-button {
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+}
