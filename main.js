@@ -581,7 +581,7 @@ function init() {
           currentModalIndex = i;
           modalImage.src = imageSrc;
           modal.classList.add("active");
-          document.body.style.overflow = "hidden";
+          document.body.style.overflow = "";
         });
 
         slideContent.appendChild(block);

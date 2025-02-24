@@ -141,8 +141,7 @@
 @media only screen and (max-width: 565px) {
   .gallery-modal.active {
     display: none;
-    justify-content: center;
-    align-items: center;
+    
   }
   .testimonials-slides {
     margin: 20px auto;
