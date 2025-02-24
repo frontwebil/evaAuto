@@ -23,6 +23,9 @@
   }
 }
 @media only screen and (max-width: 1100px) {
+  .toast-message {
+    font-size: 20px;
+  }
   .remember {
     flex-direction: column;
   }
@@ -57,7 +60,8 @@
 }
 @media only screen and (max-width: 1000px) {
   .chooseUs-cards-column {
-    margin-top: 40px;
+    margin-top: 25px;
+    gap: 25px;
   }
   .chooseUs-card-content {
     display: flex;
@@ -87,6 +91,10 @@
 }
 
 @media only screen and (max-width: 750px) {
+  .toast-message {
+    font-size: 16px;
+  }
+
   .how-we-work-card {
     max-width: 600px;
     width: 100%;
@@ -110,6 +118,14 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .section-title p {
+    color: rgba(45, 45, 45, 1);
+    line-height: 30.69px;
+    letter-spacing: 0%;
+  }
+  .goods {
+    margin-bottom: 40px;
+  }
   .moreGoods-block {
     max-width: 100%;
   }
@@ -120,7 +136,7 @@
     max-width: 100%;
     height: auto;
     margin-top: 100px;
-}
+  }
 }
 @media only screen and (max-width: 565px) {
   .gallery-modal.active {
@@ -148,6 +164,11 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  .toast-message {
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+  }
   .fs-xsm {
     font-size: 20px;
   }
@@ -185,6 +206,10 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .section-title p {
+    color: rgba(45, 45, 45, 1);
+    line-height: 20.69px;
+  }
   .modal-content {
     padding: 0;
   }

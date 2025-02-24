@@ -254,7 +254,7 @@ function addToCart(index) {
 }
 
 let SLIDES_PER_PAGE = 3;
-if (screenWidth <= 1265) {
+if (screenWidth <= 1150) {
   SLIDES_PER_PAGE = 2;
 }
 if (screenWidth <= 850) {
@@ -363,16 +363,32 @@ function initGoodsSlider() {
   }
 
   let startX;
-  slidesContainer.addEventListener(
-    "touchstart",
-    (event) => (startX = event.touches[0].clientX)
-  );
-  slidesContainer.addEventListener("touchmove", (event) => {
-    const endX = event.touches[0].clientX;
-    if (Math.abs(endX - startX) > 50) {
-      endX < startX ? nextSlide() : prevSlide();
+let swiping = false; // прапорець, щоб відстежувати стан свайпу
+
+slidesContainer.addEventListener("touchstart", (event) => {
+  startX = event.touches[0].clientX;
+  swiping = false; // скидаємо прапорець на початку жесту
+});
+
+slidesContainer.addEventListener("touchmove", (event) => {
+  if (swiping) return; // якщо свайп вже оброблено, ігноруємо подальші події
+
+  const endX = event.touches[0].clientX;
+  const diff = endX - startX;
+  
+  if (Math.abs(diff) > 50) {
+    if (diff < 0) {
+      nextSlide(); // свайп вліво
+    } else {
+      prevSlide(); // свайп вправо
     }
-  });
+    swiping = true; // позначаємо, що свайп оброблено
+  }
+});
+
+slidesContainer.addEventListener("touchend", () => {
+  swiping = false; // скидаємо прапорець після завершення жесту
+});
 
   buttonNext.addEventListener("click", nextSlide);
   buttonPrev.addEventListener("click", prevSlide);
