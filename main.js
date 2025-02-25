@@ -207,10 +207,14 @@ function updateCartUI() {
 
 openCart.addEventListener("click", () => {
   cartMenu.classList.toggle("active");
+  if(cart.length > 0) {
+    document.body.style.overflow = cartMenu.classList.contains("active") ? "hidden" : "auto";
+  }
 });
 
 closeCart.addEventListener("click", () => {
   cartMenu.classList.remove("active");
+  document.body.style.overflow = "auto";
 });
 
 function showToast(message) {
