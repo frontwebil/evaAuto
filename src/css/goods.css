@@ -142,3 +142,10 @@
   background: rgba(9, 65, 202, 0.05);
   color: rgba(9, 65, 202, 1);
 }
+.goods-mobile{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

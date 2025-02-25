@@ -2,7 +2,7 @@ import { goods } from "./const/goods";
 
 let cart = [];
 let addToCartButtons;
-const modalTahnkYou = document.getElementById('modalTahnkYou');
+const modalTahnkYou = document.getElementById("modalTahnkYou");
 const countCart = document.getElementById("count-cart");
 const openCart = document.getElementById("openCart");
 const closeCart = document.getElementById("closeMenu");
@@ -13,6 +13,24 @@ const TOKEN = "7648303468:AAHmTWnHcsfw3rtHvpGvMFykV-3Ukryyofo";
 const CHAT_ID = "-1002326050281";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 const screenWidth = window.screen.width;
+
+const goodsMobileContainer = document.getElementById("goods-mobile");
+
+goods.forEach((el, index) => {
+  goodsMobileContainer.innerHTML += `
+  <div class="good-card">
+    <img src="${el.img}" alt="" class="good-card-image">
+    <h2 class="fs-m w600" style="color: rgba(9, 65, 202, 1);">${el.title}</h2>
+    <div class="flex-good-info">
+      ${el.info.map((info) => `<p class="fs-sm w400">${info}</p>`).join("")}
+    </div>
+    <div class="good-card-controls">
+      <div class="good-card-price">${el.price} грн</div>
+      <div class="good-card-addToCard" data-good-index="${index}">у кошик</div>
+    </div>
+  </div>
+`;
+});
 
 function createGoodInCart() {
   filledCart.innerHTML = "";
@@ -163,7 +181,7 @@ function addCartEventListeners() {
       })
         .then((res) => {
           showToast("Заявка на косультацію відправлена📢");
-          modalTahnkYou.classList.add('active')
+          modalTahnkYou.classList.add("active");
           this.nameCart.value = "";
           this.phoneCart.value = "+380";
           this.markCart.value = "";
@@ -207,8 +225,10 @@ function updateCartUI() {
 
 openCart.addEventListener("click", () => {
   cartMenu.classList.toggle("active");
-  if(cart.length > 0) {
-    document.body.style.overflow = cartMenu.classList.contains("active") ? "hidden" : "auto";
+  if (cart.length > 0) {
+    document.body.style.overflow = cartMenu.classList.contains("active")
+      ? "hidden"
+      : "auto";
   }
 });
 
@@ -367,32 +387,32 @@ function initGoodsSlider() {
   }
 
   let startX;
-let swiping = false; // прапорець, щоб відстежувати стан свайпу
+  let swiping = false; // прапорець, щоб відстежувати стан свайпу
 
-slidesContainer.addEventListener("touchstart", (event) => {
-  startX = event.touches[0].clientX;
-  swiping = false; // скидаємо прапорець на початку жесту
-});
+  slidesContainer.addEventListener("touchstart", (event) => {
+    startX = event.touches[0].clientX;
+    swiping = false; // скидаємо прапорець на початку жесту
+  });
 
-slidesContainer.addEventListener("touchmove", (event) => {
-  if (swiping) return; // якщо свайп вже оброблено, ігноруємо подальші події
+  slidesContainer.addEventListener("touchmove", (event) => {
+    if (swiping) return; // якщо свайп вже оброблено, ігноруємо подальші події
 
-  const endX = event.touches[0].clientX;
-  const diff = endX - startX;
-  
-  if (Math.abs(diff) > 50) {
-    if (diff < 0) {
-      nextSlide(); // свайп вліво
-    } else {
-      prevSlide(); // свайп вправо
+    const endX = event.touches[0].clientX;
+    const diff = endX - startX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff < 0) {
+        nextSlide(); // свайп вліво
+      } else {
+        prevSlide(); // свайп вправо
+      }
+      swiping = true; // позначаємо, що свайп оброблено
     }
-    swiping = true; // позначаємо, що свайп оброблено
-  }
-});
+  });
 
-slidesContainer.addEventListener("touchend", () => {
-  swiping = false; // скидаємо прапорець після завершення жесту
-});
+  slidesContainer.addEventListener("touchend", () => {
+    swiping = false; // скидаємо прапорець після завершення жесту
+  });
 
   buttonNext.addEventListener("click", nextSlide);
   buttonPrev.addEventListener("click", prevSlide);
@@ -895,24 +915,24 @@ document.addEventListener("DOMContentLoaded", initTestinonial);
 
 const moreGoods = [
   {
-    img:'/moreGoods/1.png',
-    title:'Органайзери еко-шкіра'
+    img: "/moreGoods/1.png",
+    title: "Органайзери еко-шкіра",
   },
   {
-    img:'/moreGoods/2.png',
-    title:'Накидки'
+    img: "/moreGoods/2.png",
+    title: "Накидки",
   },
   {
-    img:'/moreGoods/3.png',
-    title:'Органайзери для телефону'
+    img: "/moreGoods/3.png",
+    title: "Органайзери для телефону",
   },
   {
-    img:'/moreGoods/4.png',
-    title:'Подушки'
+    img: "/moreGoods/4.png",
+    title: "Подушки",
   },
   {
-    img:'/moreGoods/5.png',
-    title:'Органайзери EVA - матеріал'
+    img: "/moreGoods/5.png",
+    title: "Органайзери EVA - матеріал",
   },
 ];
 
@@ -920,7 +940,7 @@ let SLIDES_PER_PAGE_PERSONAL = 3;
 if (screenWidth <= 1000) {
   SLIDES_PER_PAGE_PERSONAL = 2;
 }
-if (screenWidth <= 650  ) {
+if (screenWidth <= 650) {
   SLIDES_PER_PAGE_PERSONAL = 1;
 }
 
@@ -1108,9 +1128,7 @@ function initMoreGoods() {
 
 document.addEventListener("DOMContentLoaded", initMoreGoods);
 
-
 // MODAL
-
 
 const modalConsultating = document.getElementById("modalConsultating");
 const modalConsultatingContainer = document.querySelector(
@@ -1157,7 +1175,6 @@ phoneInput.addEventListener("input", function (e) {
   e.target.value = "+380" + numbers;
 });
 
-
 document
   .getElementById("modalForm")
   .addEventListener("submit", function (event) {
@@ -1182,8 +1199,8 @@ document
       }),
     })
       .then((res) => {
-        modalConsultating.classList.remove('active')
-        modalTahnkYou.classList.add('active')
+        modalConsultating.classList.remove("active");
+        modalTahnkYou.classList.add("active");
         showToast("Заявка на косультацію відправлена📢");
         this.name.value = "";
         this.phone.value = "+380";
@@ -1194,28 +1211,30 @@ document
       });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".custom-burger");
-    const menu = document.querySelector(".sliding-menu");
-    const links = document.querySelectorAll(".sliding-menu-link");
-  
-    links.forEach((el) => {
-      el.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        menu.classList.toggle("active");
-  
-        document.body.style.overflow = menu.classList.contains("active")
-          ? "hidden"
-          : "";
-      });
-    });
-  
-    burger.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".custom-burger");
+  const menu = document.querySelector(".sliding-menu");
+  const links = document.querySelectorAll(".sliding-menu-link");
+
+  links.forEach((el) => {
+    el.addEventListener("click", () => {
       burger.classList.toggle("active");
       menu.classList.toggle("active");
-  
+
       document.body.style.overflow = menu.classList.contains("active")
         ? "hidden"
         : "";
     });
   });
+
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+
+    document.body.style.overflow = menu.classList.contains("active")
+      ? "hidden"
+      : "";
+  });
+});
+
+
