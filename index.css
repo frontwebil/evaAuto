@@ -17,6 +17,9 @@
 @import url(/src/css/moreGoods.css);
 @import url(/src/css/burger.css);
 @import url(/src/css/media.css);
+
+html{scroll-behavior: smooth;}
+
 * {
   font-family: "Montserrat", serif;
   color: rgba(9, 9, 9, 1);
