@@ -117,6 +117,12 @@
 }
 
 @media only screen and (max-width: 750px) {
+  .modalConsultating-container {
+    padding: 30px;
+    max-width: 530px;
+    border-radius: 20px;
+  }
+
   .toast-message {
     font-size: 16px;
   }
@@ -171,6 +177,13 @@
   }
 }
 @media only screen and (max-width: 565px) {
+  .modalConsultating-container {
+    padding: 20px;
+    max-width: 480px;
+    border-radius: 20px;
+    overflow-y: scroll;
+  }
+
   .hero-title {
     font-size: 34px;
   }
@@ -197,6 +210,27 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  .form-container {
+    margin-top: 10px;
+    width: 100%;
+}
+  .form-group {
+    margin-bottom: 10px;
+    width: 100%;
+}
+  .modalConsultating-container {
+    padding: 20px;
+    max-width: 375px;
+  }
+  .form-group-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    flex-direction: column;
+  }
+  .fs-s {
+    font-size: 16px;
+  }
   .chooseUs-cards-image {
     max-width: 100%;
     height: auto;
@@ -278,10 +312,18 @@
   }
   .hero-right {
     gap: 15px;
-}
+  }
 }
 
 @media only screen and (max-width: 420px) {
+  .modalConsultating-container {
+    padding: 20px;
+    max-width: 345px;
+  }
+  textarea {
+    min-height: 50px;
+    resize: vertical;
+}
   .hero-right-card p {
     font-size: 15px;
   }
@@ -334,6 +376,10 @@
 }
 
 @media only screen and (max-width: 365px) {
+  .modalConsultating-container {
+    padding: 20px;
+    max-width: 315px;
+  }
   .hero-right-card p {
     font-size: 13px;
   }
