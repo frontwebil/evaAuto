@@ -75,7 +75,7 @@
         <a href="/" class="modalTahnkYou-return">Повернутись до покупок</a>
       </div>
     </div>
-    <header class="header" style="display: none">
+    <header class="header">
       <div class="padding-container header-flex">
         <div class="header-left">
           <img src="/logo.svg" alt="" class="logo" />
@@ -88,15 +88,34 @@
           </nav>
         </div>
         <div class="header-right">
-          <div class="header-right-flex">
+          <div class="header-right-flex mobile-hide">
             <img src="/icons/PhoneCall.svg" alt="" />
             <a href="tel:+380639768408" class="fs-s w600">+38 (063) 976 8408</a>
           </div>
-          <div class="line"></div>
+          <div class="line mobile-hide"></div>
           <div class="header-right-flex" style="cursor: pointer" id="openCart">
             <img src="/icons/ShoppingCart.svg" alt="" />
             <p class="fs-s w600">Кошик</p>
             <p class="count-cart" id="count-cart">(0)</p>
+          </div>
+          <div class="custom-burger">
+            <div class="custom-line"></div>
+            <div class="custom-line"></div>
+            <div class="custom-line"></div>
+          </div>
+          <div class="sliding-menu">
+            <nav class="sliding-menu-nav">
+              <a href="#" class="nav-link sliding-menu-link fs-s w600">Комплекти</a>
+              <a href="#" class="nav-link sliding-menu-link fs-s w600">Переваги</a>
+              <a href="#" class="nav-link sliding-menu-link fs-s w600">Галерея</a>
+              <a href="#" class="nav-link sliding-menu-link fs-s w600">Відгуки</a>
+              <a href="#" class="nav-link sliding-menu-link fs-s w600">Контакти</a>
+            </nav>
+            <div class="header-right-flex mobile-burger" style="justify-content: center;">
+              <img src="/icons/PhoneCall.svg" alt="" />
+              <a href="tel:+380639768408" class="fs-s w600">+38 (063) 976 8408</a>
+            </div>
+
           </div>
           <div class="cart-menu" id="cartMenu">
             <div class="cart-menu-flex-top">

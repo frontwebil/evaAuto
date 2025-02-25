@@ -1190,14 +1190,28 @@ document
       });
   });
 
-// fetch(URI_API, {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-//   body: JSON.stringify({
-//     chat_id: CHAT_ID,
-//     parse_mode: "html",
-//     text: "Test",
-//   }),
-// })
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".custom-burger");
+    const menu = document.querySelector(".sliding-menu");
+    const links = document.querySelectorAll(".sliding-menu-link");
+  
+    links.forEach((el) => {
+      el.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        menu.classList.toggle("active");
+  
+        document.body.style.overflow = menu.classList.contains("active")
+          ? "hidden"
+          : "";
+      });
+    });
+  
+    burger.addEventListener("click", function () {
+      burger.classList.toggle("active");
+      menu.classList.toggle("active");
+  
+      document.body.style.overflow = menu.classList.contains("active")
+        ? "hidden"
+        : "";
+    });
+  });
