@@ -83,7 +83,6 @@
 .hero-right-card p {
   font-weight: 400;
   font-size: 20px;
-  line-height: 24.38px;
   letter-spacing: 0%;
   text-align: center;
 }
@@ -96,4 +95,8 @@
   border: 2px solid rgba(30, 151, 242, 1);
   width: 30px;
   border-radius: 20px;
+}
+
+.mobile-hero-button{
+  display: none;
 }
