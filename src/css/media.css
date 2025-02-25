@@ -23,10 +23,14 @@
   }
 }
 @media only screen and (max-width: 1100px) {
+  .mobile-noPad {
+    padding: 10px 0 !important;
+  }
   .toast-message {
     font-size: 20px;
   }
   .remember {
+    border-radius: 0;
     flex-direction: column;
   }
   .orderConsult-button {
@@ -59,6 +63,11 @@
   }
 }
 @media only screen and (max-width: 1000px) {
+  .statistic {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
   .chooseUs-cards-column {
     margin-top: 25px;
     gap: 25px;
@@ -141,7 +150,6 @@
 @media only screen and (max-width: 565px) {
   .gallery-modal.active {
     display: none;
-    
   }
   .testimonials-slides {
     margin: 20px auto;
@@ -163,6 +171,22 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  .statistic-block-img {
+    width: 35px;
+    height: 35px;
+  }
+  .statistic-block {
+    max-width: 100%;
+  }
+  .statistic {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
   .toast-message {
     width: 90%;
     text-align: center;
