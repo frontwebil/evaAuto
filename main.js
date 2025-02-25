@@ -704,9 +704,6 @@ const reviews = [
   "/testimonials/7.png",
   "/testimonials/8.png",
   "/testimonials/9.png",
-  "/testimonials/10.png",
-  "/testimonials/11.png",
-  "/testimonials/12.png",
 ];
 
 let SLIDES_PER_PAGE_TESTIMONIAL = 3;
