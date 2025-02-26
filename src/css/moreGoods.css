@@ -74,9 +74,9 @@
   font-weight: 600;
   font-size: 24px;
   color: #038650;
-  word-wrap: break-word; /* Дозволяє переносити слова */
-  word-break: break-word; /* Для забезпечення переносу в сучасних браузерах */
-  white-space: normal; /* Забезпечує переноси рядків */
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 .moreGoods-block-top-text-row {
   display: flex;

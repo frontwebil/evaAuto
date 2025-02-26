@@ -24,23 +24,22 @@
   .remember-right {
     max-width: 460px;
   }
-
 }
 @media only screen and (max-width: 1100px) {
   .uniqDesign-column {
     max-width: 100%;
   }
-  .uniqDesign-column-image{
+  .uniqDesign-column-image {
     height: 200px;
   }
   .padding-container {
     max-width: 100%;
     padding: 10px 15px;
     margin: 0 auto;
-}
-.charWidthContainer{
-  flex-shrink: 0;
-}
+  }
+  .charWidthContainer {
+    flex-shrink: 0;
+  }
   .mobile-hide {
     display: none;
   }
@@ -89,7 +88,7 @@
   .uniqDesign-columns {
     flex-direction: column;
   }
-  .scroll-container{
+  .scroll-container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -150,14 +149,17 @@
   }
 }
 @media only screen and (max-width: 750px) {
-  .goods-mobile{
+  .cart-menu {
+    overflow-y: scroll;
+  }
+  .goods-mobile {
     display: flex;
     margin-bottom: 50px;
   }
-  .controls-goods-slides{
+  .controls-goods-slides {
     display: none;
   }
-  .goods-slides{
+  .goods-slides {
     display: none;
   }
   .modalTahnkYou-container {
@@ -198,7 +200,7 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .cart-menu{
+  .cart-menu {
     max-width: 100%;
   }
   .sliding-menu {
@@ -242,7 +244,7 @@
     height: auto;
     margin-top: 100px;
   }
-  .chooseUs-under{
+  .chooseUs-under {
     margin-top: 50px;
   }
 }
@@ -288,8 +290,8 @@
   }
 }
 @media only screen and (max-width: 500px) {
-  .charWidthContainer{
-    max-width: 380px!important;
+  .charWidthContainer {
+    max-width: 380px !important;
   }
   .form-container {
     margin-top: 10px;
@@ -397,8 +399,8 @@
 }
 
 @media only screen and (max-width: 420px) {
-  .charWidthContainer{
-    max-width: 340px!important;
+  .charWidthContainer {
+    max-width: 340px !important;
   }
   .modalTahnkYou-return {
     font-size: 16px;
@@ -468,13 +470,13 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .charWidthContainer{
-    max-width: 310px!important;
+  .charWidthContainer {
+    max-width: 310px !important;
   }
 }
 @media only screen and (max-width: 365px) {
-  .charWidthContainer{
-    max-width: 280px!important;
+  .charWidthContainer {
+    max-width: 280px !important;
   }
   .modalTahnkYou-return {
     font-size: 14px;
