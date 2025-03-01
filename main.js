@@ -181,13 +181,13 @@ function addCartEventListeners() {
       })
         .then((res) => {
           showToast("Заявка на косультацію відправлена📢");
-          modalTahnkYou.classList.add("active");
           this.nameCart.value = "";
           this.phoneCart.value = "+380";
           this.markCart.value = "";
           cartMenu.classList.remove("active");
           cart = [];
           updateCartUI();
+          window.location.href = "/thank.html";
         })
         .catch((error) => {
           console.log(error);
@@ -1233,5 +1233,3 @@ document.addEventListener("DOMContentLoaded", function () {
       : "";
   });
 });
-
-
