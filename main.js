@@ -187,7 +187,7 @@ function addCartEventListeners() {
           cartMenu.classList.remove("active");
           cart = [];
           updateCartUI();
-          window.location.href = "/thank.html";
+          window.location.href = "https://evaauto.com.ua/thank.html";
         })
         .catch((error) => {
           console.log(error);
@@ -1201,7 +1201,7 @@ document
         this.name.value = "";
         this.phone.value = "+380";
         this.request.value = "";
-        window.location.href = "/thank.html";
+        window.location.href = "https://evaauto.com.ua/thank.html";
       })
       .catch((error) => {
         console.log(error);
