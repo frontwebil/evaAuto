@@ -1197,11 +1197,11 @@ document
     })
       .then((res) => {
         modalConsultating.classList.remove("active");
-        modalTahnkYou.classList.add("active");
         showToast("Заявка на косультацію відправлена📢");
         this.name.value = "";
         this.phone.value = "+380";
         this.request.value = "";
+        window.location.href = "/thank.html";
       })
       .catch((error) => {
         console.log(error);
